@@ -1,0 +1,38 @@
+# Required: Telegram bot token from @BotFather
+telegram_token: "your_telegram_bot_token_here"
+
+# Required: Gemini API key from Google AI Studio
+gemini_api_key: "your_gemini_api_key_here"
+
+# Optional: User's Telegram chat ID (will be set automatically on /start command)
+# chat_id: 0
+
+# Optional: Gemini model to use for summarization
+# gemini_model: "gemini-2.0-flash-lite"
+
+# Optional: Daily digest delivery time in HH:MM format (24-hour)
+# digest_time: "09:00"
+
+# Optional: Timezone for digest scheduling (IANA timezone identifier)
+# timezone: "UTC"
+
+# Optional: Number of articles to send in each digest
+# article_count: 30
+
+# Optional: HTTP timeout for article scraping in seconds
+# fetch_timeout_secs: 10
+
+# Optional: Tag weight decay rate per fetch cycle (0.02 = 2%)
+# tag_decay_rate: 0.02
+
+# Optional: Minimum tag weight floor after decay
+# min_tag_weight: 0.1
+
+# Optional: Tag weight boost amount when article is liked
+# tag_boost_on_like: 0.2
+
+# Optional: SQLite database file path
+# db_path: "./hn-bot.db"
+
+# Optional: Logging verbosity (debug, info, warn, error)
+# log_level: "info"
