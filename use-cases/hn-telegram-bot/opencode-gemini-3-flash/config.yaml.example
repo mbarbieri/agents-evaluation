@@ -1,0 +1,7 @@
+telegram_token: "YOUR_TELEGRAM_BOT_TOKEN"
+gemini_api_key: "YOUR_GEMINI_API_KEY"
+digest_time: "09:00"
+article_count: 30
+timezone: "UTC"
+log_level: "info"
+db_path: "./hn-bot.db"
