@@ -13,6 +13,19 @@
 
 ---
 
+## Resource Usage
+
+| Agent | Time Taken | Tokens Used |
+|-------|------------|-------------|
+| claude-code-opus-4.5 | ~13 min | 105k |
+| opencode-gemini-3-pro-high | ~30 min | 73k |
+| opencode-gemini-3-flash | ~10 min | 65k |
+| opencode-minimax-m2.1 | ~20 min | 110k |
+| opencode-glm-4.7 | ~2 hours | 97k |
+| opencode-grok-code-fast-1 | ~15 min | 53k |
+
+---
+
 ## Category Winners & Losers
 
 | Category | Winner | Score | Loser | Score |
