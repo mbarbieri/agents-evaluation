@@ -1,0 +1,43 @@
+# HN Telegram Bot Configuration
+# Copy this file to config.yaml and fill in your tokens
+
+# Required: Get from @BotFather on Telegram
+telegram_token: "YOUR_TELEGRAM_BOT_TOKEN"
+
+# Required: Get from https://aistudio.google.com/apikey
+gemini_api_key: "YOUR_GEMINI_API_KEY"
+
+# Optional settings with defaults shown
+
+# Telegram chat ID - set via /start command or configure here
+# chat_id: 0
+
+# Gemini model to use
+# gemini_model: "gemini-2.0-flash-lite"
+
+# Daily digest time in 24-hour format (HH:MM)
+# digest_time: "09:00"
+
+# IANA timezone identifier
+# timezone: "UTC"
+
+# Number of articles per digest
+# article_count: 30
+
+# HTTP timeout in seconds for fetching articles
+# fetch_timeout_secs: 10
+
+# Tag decay rate per fetch cycle (0.02 = 2%)
+# tag_decay_rate: 0.02
+
+# Minimum tag weight floor
+# min_tag_weight: 0.1
+
+# Tag boost amount when user likes an article
+# tag_boost_on_like: 0.2
+
+# SQLite database file path
+# db_path: "./hn-bot.db"
+
+# Log level: debug, info, warn, error
+# log_level: "info"
