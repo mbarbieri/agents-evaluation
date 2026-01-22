@@ -15,14 +15,14 @@
 
 ## Resource Usage
 
-| Agent | Time Taken | Tokens Used |
-|-------|------------|-------------|
-| claude-code-opus-4.5 | ~13 min | 105k |
-| opencode-gemini-3-pro-high | ~30 min | 73k |
-| opencode-gemini-3-flash | ~10 min | 65k |
-| opencode-minimax-m2.1 | ~20 min | 110k |
-| opencode-glm-4.7 | ~2 hours | 97k |
-| opencode-grok-code-fast-1 | ~15 min | 53k |
+| Agent | Time Taken | Tokens Used | Lines of Code (Go) |
+|-------|------------|-------------|-------------------|
+| claude-code-opus-4.5 | ~13 min | 105k | 3,855 |
+| opencode-gemini-3-pro-high | ~30 min | 73k | 1,853 |
+| opencode-gemini-3-flash | ~10 min | 65k | 1,485 |
+| opencode-minimax-m2.1 | ~20 min | 110k | 3,063 |
+| opencode-glm-4.7 | ~2 hours | 97k | 3,229 |
+| opencode-grok-code-fast-1 | ~15 min | 53k | 1,546 |
 
 ---
 
