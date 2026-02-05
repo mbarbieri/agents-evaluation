@@ -8,12 +8,13 @@
 | 2nd | claude-code-sonnet-4.5 | 82/100 |
 | 3rd | opencode-gpt-5.2-codex | 79/100 |
 | 4th | opencode-gpt-5.2 | 78/100 |
-| 5th | opencode-gemini-3-pro-high | 76/100 |
-| 6th | opencode-gemini-3-flash | 71/100 |
-| 7th | opencode-kimi-2.5 | 65/100 |
-| 8th | opencode-minimax-m2.1 | 61/100 |
-| 9th | opencode-glm-4.7 | 56/100 |
-| 10th | opencode-grok-code-fast-1 | 49/100 |
+| 5th | claude-code-opus-4.6-high | 77/100 |
+| 6th | opencode-gemini-3-pro-high | 76/100 |
+| 7th | opencode-gemini-3-flash | 71/100 |
+| 8th | opencode-kimi-2.5 | 65/100 |
+| 9th | opencode-minimax-m2.1 | 61/100 |
+| 10th | opencode-glm-4.7 | 56/100 |
+| 11th | opencode-grok-code-fast-1 | 49/100 |
 
 ---
 
@@ -23,6 +24,7 @@
 |-------|------------|-------------|-------------------|
 | claude-code-opus-4.5 | ~13 min | 105k | 3,855 |
 | claude-code-sonnet-4.5 | ~17 min | 114k | 3,305 |
+| claude-code-opus-4.6-high | ~12 min | 104k | 4,776 |
 | opencode-gpt-5.2-codex | N/A | N/A | 3,166 |
 | opencode-gpt-5.2 | ~24 min | 84k | 2,995 |
 | opencode-gemini-3-pro-high | ~30 min | 73k | 1,853 |
@@ -41,11 +43,11 @@
 | Functional Completeness | claude-code-opus-4.5 | 10 | opencode-grok-code-fast-1 | 3 |
 | Test Quality & Coverage | claude-code-opus-4.5 | 9 | opencode-gemini-3-flash | 4 |
 | Code Clarity | claude-code-opus-4.5 | 9 | gemini-flash/glm/grok (tie) | 7 |
-| DRY Principle | opus-4.5/gemini-pro/kimi-2.5 (tie) | 8 | opencode-glm-4.7 | 6 |
+| DRY Principle | opus-4.5/gemini-pro/kimi-2.5 (tie) | 8 | opus-4.6-high/glm-4.7 (tie) | 6 |
 | SOLID Principles | opus/sonnet/gpt-5.2-codex/gemini-pro (tie) | 9 | opencode-minimax-m2.1 | 4 |
 | YAGNI Principle | claude-code-opus-4.5 | 10 | flash/glm/grok (tie) | 8 |
-| Error Handling | claude-code-opus-4.5 | 9 | opencode-grok-code-fast-1 | 4 |
-| Interface Design | opus/sonnet/gpt-5.2-codex/gemini-pro (tie) | 9 | opencode-minimax-m2.1 | 3 |
+| Error Handling | opus-4.5/opus-4.6-high (tie) | 9 | opencode-grok-code-fast-1 | 4 |
+| Interface Design | opus/sonnet/gpt-5.2-codex/opus-4.6-high/gemini-pro (tie) | 9 | opencode-minimax-m2.1 | 3 |
 | Logging & Observability | claude-code-opus-4.5 | 9 | opencode-grok-code-fast-1 | 1 |
 | Specification Adherence | claude-code-opus-4.5 | 10 | opencode-grok-code-fast-1 | 3 |
 
@@ -53,19 +55,19 @@
 
 ## Full Comparison Table
 
-| Category | opus-4.5 | sonnet-4.5 | gpt-5.2-codex | gpt-5.2 | gemini-pro | gemini-flash | kimi-2.5 | minimax-m2.1 | glm-4.7 | grok-fast-1 |
-|----------|----------|------------|---------------|---------|------------|--------------|----------|--------------|---------|-------------|
-| Functional Completeness | **10** | 8 | 9 | 9 | 8 | 8 | 5 | 5 | 4 | 3 |
-| Test Quality & Coverage | **9** | 7 | 5 | 5 | 6 | 4 | 5 | 5 | 5 | 5 |
-| Code Clarity | **9** | 8 | 8 | 8 | 8 | 7 | 8 | 8 | 7 | 7 |
-| DRY Principle | **8** | 7 | 7 | 7 | **8** | 7 | **8** | 7 | 6 | 7 |
-| SOLID Principles | **9** | **9** | **9** | 8 | **9** | 7 | 6 | 4 | 6 | 6 |
-| YAGNI Principle | **10** | 9 | 9 | 9 | 9 | 8 | 9 | 9 | 8 | 8 |
-| Error Handling | **9** | 8 | 8 | 8 | 7 | 8 | 7 | 7 | 5 | 4 |
-| Interface Design | **9** | **9** | **9** | 8 | **9** | 7 | 5 | 3 | 5 | 5 |
-| Logging & Observability | **9** | 8 | 6 | 7 | 5 | 7 | 7 | 8 | 6 | 1 |
-| Specification Adherence | **10** | 9 | 9 | 9 | 7 | 8 | 5 | 5 | 4 | 3 |
-| **TOTAL** | **92** | **82** | **79** | **78** | **76** | **71** | **65** | **61** | **56** | **49** |
+| Category | opus-4.5 | sonnet-4.5 | gpt-5.2-codex | gpt-5.2 | opus-4.6-high | gemini-pro | gemini-flash | kimi-2.5 | minimax-m2.1 | glm-4.7 | grok-fast-1 |
+|----------|----------|------------|---------------|---------|---------------|------------|--------------|----------|--------------|---------|-------------|
+| Functional Completeness | **10** | 8 | 9 | 9 | 8 | 8 | 8 | 5 | 5 | 4 | 3 |
+| Test Quality & Coverage | **9** | 7 | 5 | 5 | 7 | 6 | 4 | 5 | 5 | 5 | 5 |
+| Code Clarity | **9** | 8 | 8 | 8 | 8 | 8 | 7 | 8 | 8 | 7 | 7 |
+| DRY Principle | **8** | 7 | 7 | 7 | 6 | **8** | 7 | **8** | 7 | 6 | 7 |
+| SOLID Principles | **9** | **9** | **9** | 8 | 8 | **9** | 7 | 6 | 4 | 6 | 6 |
+| YAGNI Principle | **10** | 9 | 9 | 9 | 7 | 9 | 8 | 9 | 9 | 8 | 8 |
+| Error Handling | **9** | 8 | 8 | 8 | **9** | 7 | 8 | 7 | 7 | 5 | 4 |
+| Interface Design | **9** | **9** | **9** | 8 | **9** | **9** | 7 | 5 | 3 | 5 | 5 |
+| Logging & Observability | **9** | 8 | 6 | 7 | 8 | 5 | 7 | 7 | 8 | 6 | 1 |
+| Specification Adherence | **10** | 9 | 9 | 9 | 7 | 7 | 8 | 5 | 5 | 4 | 3 |
+| **TOTAL** | **92** | **82** | **79** | **78** | **77** | **76** | **71** | **65** | **61** | **56** | **49** |
 
 ---
 
@@ -79,7 +81,9 @@
 
 **opencode-gpt-5.2** placed fourth with 78/100, demonstrating solid architectural understanding with proper interface segregation and dependency injection. All specified features work correctly including the digest pipeline, reaction handling, and preference learning. Main weakness was test coverage (~65% average vs "near 100%" required), with the bot package critically undertested at 4.1%. Thread-safe settings properly implemented with sync.RWMutex. All 10 intentional design decisions preserved.
 
-**opencode-gemini-3-pro-high** was fifth, tying for first in 3 categories (DRY, SOLID, Interface Design) but struggled with logging consistency.
+**claude-code-opus-4.6-high** placed fifth with 77/100. Efficient execution (~12 min, 104k tokens) with all features functionally complete. Tied for first in Error Handling (9/10) and Interface Design (9/10), with 14+ narrow interfaces and excellent graceful degradation. Main weaknesses were DRY violations (ranking logic duplicated between an unused `ranker` package and the `digest` package, time parsing triplicated across three packages) and not using the specified `go-telegram-bot-api` library, instead implementing Telegram API calls via raw HTTP. Test coverage was uneven: config/ranker at 100%, but bot at 76.7% and storage at 78.3%. The highest LOC output (4,776 lines) was partly due to ~170 lines of adapter boilerplate from type duplication across packages.
+
+**opencode-gemini-3-pro-high** was sixth, tying for first in 3 categories (DRY, SOLID, Interface Design) but struggled with logging consistency.
 
 **opencode-kimi-2.5** placed seventh with 65/100. The implementation has well-organized code with clear naming (8/10 clarity, 8/10 DRY, 9/10 YAGNI), but suffers from critical functional gaps. Reaction handling is completely broken (`message_reaction` never requested from Telegram API), the 70/30 ranking formula has a bug (passes wrong parameters), and comment counts are always zero. Test coverage is highly uneven: ranker/scheduler at 100%, but bot at 7.6% and digest at 6.4%—the core packages were left essentially untested. Thread-safe settings properly implemented with mutex.
 
@@ -87,6 +91,6 @@
 
 **Common weaknesses across agents:**
 - Test coverage below the "near 100%" spec requirement
-- Missing thread-safe settings (mutex protection) - except opus-4.5, gpt-5.2-codex, gpt-5.2, and kimi-2.5
+- Missing thread-safe settings (mutex protection) - except opus-4.5, opus-4.6-high, gpt-5.2-codex, gpt-5.2, and kimi-2.5
 - Reaction handling not properly wired in many implementations
 - Inconsistent use of slog structured logging
