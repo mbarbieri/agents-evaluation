@@ -10,11 +10,12 @@
 | 4th | opencode-gpt-5.2 | 78/100 |
 | 5th | claude-code-opus-4.6-high | 77/100 |
 | 6th | opencode-gemini-3-pro-high | 76/100 |
-| 7th | opencode-gemini-3-flash | 71/100 |
-| 8th | opencode-kimi-2.5 | 65/100 |
-| 9th | opencode-minimax-m2.1 | 61/100 |
-| 10th | opencode-glm-4.7 | 56/100 |
-| 11th | opencode-grok-code-fast-1 | 49/100 |
+| 7th | codex-gpt-5.2-codex-high | 72/100 |
+| 8th | opencode-gemini-3-flash | 71/100 |
+| 9th | opencode-kimi-2.5 | 65/100 |
+| 10th | opencode-minimax-m2.1 | 61/100 |
+| 11th | opencode-glm-4.7 | 56/100 |
+| 12th | opencode-grok-code-fast-1 | 49/100 |
 
 ---
 
@@ -26,6 +27,7 @@
 | claude-code-sonnet-4.5 | ~17 min | 114k | 3,305 |
 | claude-code-opus-4.6-high | ~12 min | 104k | 4,776 |
 | opencode-gpt-5.2-codex | N/A | N/A | 3,166 |
+| codex-gpt-5.2-codex-high | ~14 min | N/A | 2,638 |
 | opencode-gpt-5.2 | ~24 min | 84k | 2,995 |
 | opencode-gemini-3-pro-high | ~30 min | 73k | 1,853 |
 | opencode-gemini-3-flash | ~10 min | 65k | 1,485 |
@@ -41,7 +43,7 @@
 | Category | Winner | Score | Loser | Score |
 |----------|--------|-------|-------|-------|
 | Functional Completeness | claude-code-opus-4.5 | 10 | opencode-grok-code-fast-1 | 3 |
-| Test Quality & Coverage | claude-code-opus-4.5 | 9 | opencode-gemini-3-flash | 4 |
+| Test Quality & Coverage | claude-code-opus-4.5 | 9 | codex-high/gemini-flash (tie) | 4 |
 | Code Clarity | claude-code-opus-4.5 | 9 | gemini-flash/glm/grok (tie) | 7 |
 | DRY Principle | opus-4.5/gemini-pro/kimi-2.5 (tie) | 8 | opus-4.6-high/glm-4.7 (tie) | 6 |
 | SOLID Principles | opus/sonnet/gpt-5.2-codex/gemini-pro (tie) | 9 | opencode-minimax-m2.1 | 4 |
@@ -55,19 +57,19 @@
 
 ## Full Comparison Table
 
-| Category | opus-4.5 | sonnet-4.5 | gpt-5.2-codex | gpt-5.2 | opus-4.6-high | gemini-pro | gemini-flash | kimi-2.5 | minimax-m2.1 | glm-4.7 | grok-fast-1 |
-|----------|----------|------------|---------------|---------|---------------|------------|--------------|----------|--------------|---------|-------------|
-| Functional Completeness | **10** | 8 | 9 | 9 | 8 | 8 | 8 | 5 | 5 | 4 | 3 |
-| Test Quality & Coverage | **9** | 7 | 5 | 5 | 7 | 6 | 4 | 5 | 5 | 5 | 5 |
-| Code Clarity | **9** | 8 | 8 | 8 | 8 | 8 | 7 | 8 | 8 | 7 | 7 |
-| DRY Principle | **8** | 7 | 7 | 7 | 6 | **8** | 7 | **8** | 7 | 6 | 7 |
-| SOLID Principles | **9** | **9** | **9** | 8 | 8 | **9** | 7 | 6 | 4 | 6 | 6 |
-| YAGNI Principle | **10** | 9 | 9 | 9 | 7 | 9 | 8 | 9 | 9 | 8 | 8 |
-| Error Handling | **9** | 8 | 8 | 8 | **9** | 7 | 8 | 7 | 7 | 5 | 4 |
-| Interface Design | **9** | **9** | **9** | 8 | **9** | **9** | 7 | 5 | 3 | 5 | 5 |
-| Logging & Observability | **9** | 8 | 6 | 7 | 8 | 5 | 7 | 7 | 8 | 6 | 1 |
-| Specification Adherence | **10** | 9 | 9 | 9 | 7 | 7 | 8 | 5 | 5 | 4 | 3 |
-| **TOTAL** | **92** | **82** | **79** | **78** | **77** | **76** | **71** | **65** | **61** | **56** | **49** |
+| Category | opus-4.5 | sonnet-4.5 | gpt-5.2-codex | gpt-5.2 | opus-4.6-high | gemini-pro | codex-high | gemini-flash | kimi-2.5 | minimax-m2.1 | glm-4.7 | grok-fast-1 |
+|----------|----------|------------|---------------|---------|---------------|------------|------------|--------------|----------|--------------|---------|-------------|
+| Functional Completeness | **10** | 8 | 9 | 9 | 8 | 8 | 8 | 8 | 5 | 5 | 4 | 3 |
+| Test Quality & Coverage | **9** | 7 | 5 | 5 | 7 | 6 | 4 | 4 | 5 | 5 | 5 | 5 |
+| Code Clarity | **9** | 8 | 8 | 8 | 8 | 8 | 8 | 7 | 8 | 8 | 7 | 7 |
+| DRY Principle | **8** | 7 | 7 | 7 | 6 | **8** | 7 | 7 | **8** | 7 | 6 | 7 |
+| SOLID Principles | **9** | **9** | **9** | 8 | 8 | **9** | 7 | 7 | 6 | 4 | 6 | 6 |
+| YAGNI Principle | **10** | 9 | 9 | 9 | 7 | 9 | 8 | 8 | 9 | 9 | 8 | 8 |
+| Error Handling | **9** | 8 | 8 | 8 | **9** | 7 | 7 | 8 | 7 | 7 | 5 | 4 |
+| Interface Design | **9** | **9** | **9** | 8 | **9** | **9** | 7 | 7 | 5 | 3 | 5 | 5 |
+| Logging & Observability | **9** | 8 | 6 | 7 | 8 | 5 | 7 | 7 | 7 | 8 | 6 | 1 |
+| Specification Adherence | **10** | 9 | 9 | 9 | 7 | 7 | 9 | 8 | 5 | 5 | 4 | 3 |
+| **TOTAL** | **92** | **82** | **79** | **78** | **77** | **76** | **72** | **71** | **65** | **61** | **56** | **49** |
 
 ---
 
@@ -84,6 +86,8 @@
 **claude-code-opus-4.6-high** placed fifth with 77/100. Efficient execution (~12 min, 104k tokens) with all features functionally complete. Tied for first in Error Handling (9/10) and Interface Design (9/10), with 14+ narrow interfaces and excellent graceful degradation. Main weaknesses were DRY violations (ranking logic duplicated between an unused `ranker` package and the `digest` package, time parsing triplicated across three packages) and not using the specified `go-telegram-bot-api` library, instead implementing Telegram API calls via raw HTTP. Test coverage was uneven: config/ranker at 100%, but bot at 76.7% and storage at 78.3%. The highest LOC output (4,776 lines) was partly due to ~170 lines of adapter boilerplate from type duplication across packages.
 
 **opencode-gemini-3-pro-high** was sixth, tying for first in 3 categories (DRY, SOLID, Interface Design) but struggled with logging consistency.
+
+**codex-gpt-5.2-codex-high** placed seventh with 72/100 in ~14 minutes with a compact 2,638 lines. All major features are implemented correctly with excellent spec adherence (9/10) — all 10 intentional design decisions preserved including custom long-polling with `message_reaction` support, 70/30 ranking, and thread-safe settings via `sync.RWMutex`. Code is clean and readable (8/10) with lean implementation (8/10 YAGNI). The critical weakness is test coverage at only 56.9% overall (bot package at 38.1%, Poller/Sender at 0%), far below the "near 100%" target and tied for lowest in that category. Notable code smells include a `timeHHMM` regex duplicated in 3 files and a silent `recover()` in `BoostTags` that swallows panics. No table-driven tests used anywhere.
 
 **opencode-kimi-2.5** placed seventh with 65/100. The implementation has well-organized code with clear naming (8/10 clarity, 8/10 DRY, 9/10 YAGNI), but suffers from critical functional gaps. Reaction handling is completely broken (`message_reaction` never requested from Telegram API), the 70/30 ranking formula has a bug (passes wrong parameters), and comment counts are always zero. Test coverage is highly uneven: ranker/scheduler at 100%, but bot at 7.6% and digest at 6.4%—the core packages were left essentially untested. Thread-safe settings properly implemented with mutex.
 
